@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+<mapper namespace="com.kakaocorp.ssd.daniel.dao.WaitNotificationDao">
+
+    <insert id="insertNotification" parameterType="com.kakaocorp.ssd.daniel.dto.WaitNotificationDto">
+
+        insert into wait_notification
+        (
+        post_id,
+        agit_id
+        )
+        values
+        (
+        #{postId},
+        #{agitId}
+        );
+
+    </insert>
+
+    <select id="findAll" resultType="com.kakaocorp.ssd.daniel.dto.WaitNotificationDto">
+
+        select *
+        from wait_notification;
+
+    </select>
+</mapper>
